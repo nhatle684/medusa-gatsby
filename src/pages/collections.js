@@ -11,11 +11,11 @@ const Collections = ({ data }) => {
 
   return (
     <div className="layout-base">
-      <SearchEngineOptimization title="All Collections" />
+      <SearchEngineOptimization title="Tất cả danh mục" />
       <div className="border-b border-ui-medium mb-8 pb-8">
-        <h1 className="mb-2">All Collections</h1>
+        <h1 className="mb-2">Tất cả danh mục</h1>
         <p className="font-light text-sm">
-          Here you can browse all of our collections
+          Ở đây, bạn có thể duyệt qua tất cả các bộ sưu tập của chúng tôi.
         </p>
       </div>
       <Grid>

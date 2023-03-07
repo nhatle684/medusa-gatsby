@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
-import Logo from "../../icons/logo.svg"
+import Logo from "../../icons/logo.png"
 import AccountPopover from "./account-popover"
 import Banner from "./banner"
 import CartPopover from "./cart-popover"
@@ -119,8 +119,8 @@ const Header = () => {
 
             <div className="hidden lg:flex lg:items-center">
               <div className="hidden flex-grow items-center justify-center lg:flex text-sm font-medium">
-                <HeaderLink to="/products" text="Products" />
-                <HeaderLink to="/collections" text="Collections" />
+                <HeaderLink to="/products" text="Sản phẩm" />
+                <HeaderLink to="/collections" text="Danh mục" />
               </div>
             </div>
           </div>

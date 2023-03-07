@@ -180,7 +180,7 @@ exports.createPages = async function ({ actions, graphql }) {
     path: "/products",
     component: require.resolve(`./src/templates/collection.js`),
     context: {
-      title: "All Products",
+      title: "Tất cả sản phẩm",
       products: products,
       filterables: getFilterables(products),
     },
