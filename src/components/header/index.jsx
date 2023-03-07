@@ -87,7 +87,7 @@ const Header = () => {
   return (
     <div className="sticky top-0 z-20">
       <header className="relative bg-white">
-        <Banner />
+        {/* <Banner /> */}
         <MobileMenu open={open} setOpen={setOpen} />
         <nav
           aria-label="Top"
