@@ -22,11 +22,11 @@ const OrderHistoryItem = ({ item, currencyCode }) => {
             <h3 className="text-sm lg:text-lg">{item.title}</h3>
             <div className="text-sm flex flex-col mt-2">
               <span className="mb-2">
-                <span className="text-ui-dark">Variant: </span>
+                <span className="text-ui-dark">Loại: </span>
                 <span>{item.description}</span>
               </span>
               <span>
-                <span className="text-ui-dark">Quantity: </span>
+                <span className="text-ui-dark">Số lượng: </span>
                 <span>{item.quantity}</span>
               </span>
             </div>
@@ -39,7 +39,7 @@ const OrderHistoryItem = ({ item, currencyCode }) => {
         <div>
           <div className="flex items-center text-sm font-medium">
             <RegionalLink to={item.variant.product.handle}>
-              View Product
+              Xem sản phẩm
             </RegionalLink>
             <div className="bg-ui-dark h-4 w-px mx-4" />
             <button
@@ -51,7 +51,7 @@ const OrderHistoryItem = ({ item, currencyCode }) => {
                 })
               }
             >
-              Buy Again
+              Mua lại
             </button>
           </div>
         </div>

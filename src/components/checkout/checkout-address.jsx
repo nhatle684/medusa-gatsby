@@ -18,47 +18,39 @@ const CheckoutAddress = ({ controller }) => {
     <div className="mt-3 mb-6">
       <SplitField>
         <Field
-          label="First name"
-          autocomplete="given_name"
-          name="first_name"
-          formik={controller}
-          defaultValue={controller.values.first_name}
-        />
-        <Field
-          label="Last name"
+          label="Họ"
           autocomplete="family-name"
           name="last_name"
           formik={controller}
           defaultValue={controller.values.last_name}
         />
+        <Field
+          label="Tên"
+          autocomplete="given_name"
+          name="first_name"
+          formik={controller}
+          defaultValue={controller.values.first_name}
+        />
       </SplitField>
       <Field
-        label="Company"
+        label="Công ty"
         className="mt-4"
         autocomplete="organization"
         name="company"
         formik={controller}
         defaultValue={controller.values.company}
       />
-      <Field
-        label="Address"
-        className="mt-4"
-        autocomplete="address-line1"
-        name="address_1"
-        formik={controller}
-        defaultValue={controller.values.address_1}
-      />
-      <Field
-        label="Apartment, suite, etc."
+      {/* <Field
+        label="Căn hộ, phòng, vv."
         className="mt-4"
         autocomplete="address-line2"
         name="address_2"
         formik={controller}
         defaultValue={controller.values.address_2}
-      />
+      /> */}
       <SplitField>
         <Select
-          label="Country"
+          label="Quốc gia"
           autocomplete="country-code"
           name="country_code"
           formik={controller}
@@ -69,7 +61,7 @@ const CheckoutAddress = ({ controller }) => {
           }))}
         />
         <Field
-          label="City"
+          label="Thành phố"
           autocomplete="city-code"
           name="city"
           formik={controller}
@@ -78,7 +70,25 @@ const CheckoutAddress = ({ controller }) => {
       </SplitField>
       <SplitField>
         <Field
-          label="State / Province"
+          label="Quận/huyện"
+          className="mt-4"
+          autocomplete="address-level1"
+          name="province"
+          formik={controller}
+          defaultValue={controller.values.province}
+        />
+        <Field
+          label="Địa chỉ"
+          className="mt-4"
+          autocomplete="address-line1"
+          name="address_1"
+          formik={controller}
+          defaultValue={controller.values.address_1}
+        />
+      </SplitField>
+      {/* <SplitField>
+        <Field
+          label="Quận/huyện"
           autocomplete="address-level1"
           name="province"
           formik={controller}
@@ -91,9 +101,9 @@ const CheckoutAddress = ({ controller }) => {
           formik={controller}
           defaultValue={controller.values.postal_code}
         />
-      </SplitField>
+      </SplitField> */}
       <Field
-        label="Phone"
+        label="Điện thoại"
         className="mt-4"
         autocomplete="tel"
         name="phone"

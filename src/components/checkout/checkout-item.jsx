@@ -12,12 +12,12 @@ const CheckoutItem = ({ item, currencyCode }) => {
         <div className="flex flex-col justify-between">
           <div>
             <p className="font-semibold mb-2">{item.title}</p>
-            <p>Variant: {item.description}</p>
+            <p>Loại: {item.description}</p>
           </div>
           <div>
-            <p className="mb-2">Quantity: {item.quantity}</p>
+            <p className="mb-2">Số lượng: {item.quantity}</p>
             <p className="font-medium">
-              Total: {formatPrice(item.unit_price, currencyCode, item.quantity)}
+              Tổng cộng: {formatPrice(item.unit_price, currencyCode, item.quantity)}
             </p>
           </div>
         </div>

@@ -13,12 +13,12 @@ const MobileMenu = ({ open, setOpen }) => {
       path: "/create-return",
     },
     {
-      name: "FAQ",
-      path: "/faq",
+      name: "Chính sách mua hàng",
+      to: "/chinh-sach-mua-hang",
     },
     {
-      name: "Terms & Conditions",
-      path: "/terms-and-conditions",
+      name: "Liên hệ",
+      path: "/lien-he",
     },
   ]
 
@@ -73,7 +73,7 @@ const MobileMenu = ({ open, setOpen }) => {
                 className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
                 onClick={() => setOpen(false)}
               >
-                <span className="sr-only">Close menu</span>
+                <span className="sr-only">Đóng menu</span>
                 &times;
               </button>
             </div>
@@ -94,7 +94,7 @@ const MobileMenu = ({ open, setOpen }) => {
                   className="-m-2 p-2 block font-medium text-gray-900"
                   onClick={() => setOpen(false)}
                 >
-                  Danh mục
+                  Dòng máy
                 </Link>
               </div>
             </div>
@@ -122,7 +122,7 @@ const MobileMenu = ({ open, setOpen }) => {
                       className="-m-2 p-2 block font-medium text-gray-900"
                       onClick={() => setOpen(false)}
                     >
-                      Account
+                      Tài khoản
                     </Link>
                   </div>
                   <div className="flow-root">
@@ -131,7 +131,7 @@ const MobileMenu = ({ open, setOpen }) => {
                       className="-m-2 p-2 block font-medium text-gray-900"
                       onClick={() => setOpen(false)}
                     >
-                      Order History
+                      Lịch sử mua hàng
                     </Link>
                   </div>
                 </Fragment>
@@ -143,7 +143,7 @@ const MobileMenu = ({ open, setOpen }) => {
                       className="-m-2 p-2 block font-medium text-gray-900"
                       onClick={() => setOpen(false)}
                     >
-                      Sign in
+                      Đăng nhập
                     </Link>
                   </div>
                   <div className="flow-root">
@@ -152,7 +152,7 @@ const MobileMenu = ({ open, setOpen }) => {
                       className="-m-2 p-2 block font-medium text-gray-900"
                       onClick={() => setOpen(false)}
                     >
-                      Create account
+                      Tạo tài khoản
                     </Link>
                   </div>
                 </Fragment>
@@ -164,32 +164,7 @@ const MobileMenu = ({ open, setOpen }) => {
                 disabled ? "hidden" : "border-t border-gray-200 py-6 px-4"
               )}
             >
-              <select
-                className="shadow rounded-md border-none"
-                onChange={handleRegionChange}
-                defaultValue={JSON.stringify({ region, country })}
-              >
-                {regions.map((region, index) => {
-                  return (
-                    <Fragment key={index}>
-                      {region.countries.map(country => {
-                        return (
-                          <option
-                            key={country.display_name}
-                            value={JSON.stringify({
-                              region: region,
-                              country: country.display_name,
-                            })}
-                          >
-                            {country.display_name} /{" "}
-                            {region.currency_code.toUpperCase()}
-                          </option>
-                        )
-                      })}
-                    </Fragment>
-                  )
-                })}
-              </select>
+              
             </div>
           </div>
         </Transition.Child>

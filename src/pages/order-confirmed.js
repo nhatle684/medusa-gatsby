@@ -7,7 +7,7 @@ const OrderConfirmed = ({ location }) => {
   const [order, setOrder] = useState(undefined)
   const [loading, setLoading] = useState(true)
   const [message, setMessage] = useState(
-    "Hang on, while we process your order."
+    "Xin hãy chờ, chúng tôi đang xử lý đơn hàng của bạn."
   )
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const OrderConfirmed = ({ location }) => {
     const onNoOrder = () => {
       if (!order && !loading) {
         setMessage(
-          "We couldn't find your order, it might have gone through but we can't seem to find it at the moment. Please check your email for an order confirmation."
+          "Chúng tôi không thể tìm thấy đơn hàng của bạn, có thể đơn hàng đã được xử lý nhưng hiện tại chúng tôi không thể tìm thấy nó. Vui lòng kiểm tra email của bạn để xác nhận đơn hàng."
         )
       }
     }
@@ -40,14 +40,13 @@ const OrderConfirmed = ({ location }) => {
 
   return !loading && order ? (
     <div className="layout-base flex justify-center pb-16">
-      <SearchEngineOptimization title="Order Confirmed" />
+      <SearchEngineOptimization title="Đặt hàng thành công" />
       <div className="max-w-xl">
-        <span className="text-xs font-medium mb-2">THANK YOU</span>
-        <h1>Order Confirmed</h1>
+        <span className="text-xs font-medium mb-2">Xin cảm ơn</span>
+        <h1>Đặt hàng thành công</h1>
         <p className="text-md font-light mt-3">
-          Your order #{order.display_id} was successfully processed. You will
-          receive an email with the tracking number of your parcel once it’s
-          avaliable.
+          Đơn hàng số #{order.display_id} đã được xử lý thành công.
+          Bạn sẽ nhận được một email có số theo dõi của bưu kiện của bạn khi nó đã sẵn sàng.
         </p>
         <div className="my-8">
           {order.items.map((item, index) => {

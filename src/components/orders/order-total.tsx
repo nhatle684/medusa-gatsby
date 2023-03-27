@@ -7,13 +7,13 @@ const OrderTotal = ({ order }) => {
   return (
     <div className="font-light text-sm">
       <div className="flex items-center justify-between mb-2">
-        <p>Subtotal</p>
+        <p>Thành tiền</p>
         <p className="font-medium">
           {formatPrice(order.subtotal, order.currency_code)}
         </p>
       </div>
       <div className="flex items-center justify-between mb-2">
-        <p>Shipping</p>
+        <p>Phí vận chuyển</p>
         <p className="font-medium">
           {formatPrice(order.shipping_total, order.currency_code)}
         </p>
@@ -21,7 +21,7 @@ const OrderTotal = ({ order }) => {
       {appliedDiscount ? (
         <div className="flex items-center justify-between mb-2">
           <div className="inline-flex items-center">
-            <p>Discount</p>
+            <p>Giảm giá</p>
             <span className="text-2xs py-1 px-3 rounded-2xl bg-ui-medium ml-2 font-medium">
               {appliedDiscount.code}
             </span>
@@ -30,20 +30,20 @@ const OrderTotal = ({ order }) => {
             {appliedDiscount.type === "percentage"
               ? `- ${appliedDiscount.value}%`
               : appliedDiscount.type === "free_shipping"
-              ? "Free Shipping"
+              ? "Miễn phí vận chuyển"
               : `- ${formatPrice(appliedDiscount.value, order.currency_code)}`}
           </p>
         </div>
       ) : null}
       <div className="flex items-center justify-between mb-2">
-        <p>Taxes</p>
+        <p>Thuế</p>
         <p className="font-medium">
           {formatPrice(order.tax_total, order.currency_code)}
         </p>
       </div>
       <div className="h-px w-full bg-ui-medium mb-2" />
       <div className="flex items-center justify-between">
-        <p>Total</p>
+        <p>Tổng cộng</p>
         <p className="font-medium">
           {formatPrice(order.total, order.currency_code)}
         </p>

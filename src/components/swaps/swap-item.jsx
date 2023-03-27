@@ -14,16 +14,16 @@ const SwapItem = ({ item, currencyCode, taxRate }) => {
         <div className="flex flex-col flex-grow">
           <p className="font-semibold">{item.title}</p>
           <p className="text-sm">
-            <span className="text-ui-dark">Variant:</span> {item.variant.title}
+            <span className="text-ui-dark">Loại:</span> {item.variant.title}
           </p>
         </div>
         <div className="flex text-sm mt-4">
           <DividedContainer>
             <p>
-              <span className="text-ui-dark">Quantity</span> {item.quantity}
+              <span className="text-ui-dark">Số lượng</span> {item.quantity}
             </p>
             <p>
-              <span className="text-ui-dark">Total</span>{" "}
+              <span className="text-ui-dark">Tổng cộng</span>{" "}
               {formatPrice(
                 item.unit_price,
                 currencyCode,

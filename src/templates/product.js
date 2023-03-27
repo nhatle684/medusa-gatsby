@@ -85,7 +85,7 @@ const Product = ({ data, pageContext }) => {
               onClick={() => handleAddToCart()}
               disabled={loading}
             >
-              Add to bag
+              Thêm vào giỏ hàng
             </button>
             <QuantitySelector
               quantity={quantity}
@@ -117,8 +117,8 @@ const Product = ({ data, pageContext }) => {
       </div>
       <div className="my-12">
         <Grid
-          title="You might also like"
-          cta={{ to: "/products", text: "Browse all products" }}
+          title="Có thể bạn cũng thích"
+          cta={{ to: "/products", text: "Xem tất cả sản phẩm" }}
         >
           {related.edges
             .map(({ node }) => node)

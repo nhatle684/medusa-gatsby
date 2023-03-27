@@ -1,8 +1,8 @@
 import * as Yup from "yup"
 
 const ERRORS = {
-  REQUIRED: "This field is required",
-  INVALID_EMAIL: "Not a valid email",
+  REQUIRED: "Vui lòng điền thông tin",
+  INVALID_EMAIL: "Email không hợp lệ",
 }
 
 const Validator = {
@@ -30,8 +30,8 @@ const Validator = {
       country_code: Yup.string().required(ERRORS.REQUIRED),
       city: Yup.string().required(ERRORS.REQUIRED),
       province: Yup.string().optional(),
-      postal_code: Yup.string().required(ERRORS.REQUIRED),
-      phone: Yup.string().optional(),
+      postal_code: Yup.string().optional(),
+      phone: Yup.string().required(ERRORS.REQUIRED),
     }).required(ERRORS.REQUIRED),
     billingSchema: Yup.object({
       first_name: Yup.string().required(ERRORS.REQUIRED),
@@ -42,7 +42,7 @@ const Validator = {
       country_code: Yup.string().required(ERRORS.REQUIRED),
       city: Yup.string().required(ERRORS.REQUIRED),
       province: Yup.string().optional(),
-      postal_code: Yup.string().required(ERRORS.REQUIRED),
+      postal_code: Yup.string().optional(),
     }).required(ERRORS.REQUIRED),
     shippingMethodSchema: Yup.object({
       option_id: Yup.string().required(ERRORS.REQUIRED),

@@ -32,7 +32,7 @@ const ProductImages = ({ images = [] }) => {
             >
               <GatsbyImage
                 image={image.childImageSharp.gatsbyImageData}
-                alt={`Product #${index + 1}`}
+                alt={`Sản phẩm #${index + 1}`}
                 objectFit="cover"
                 objectPosition="center"
                 className="h-full w-full"
@@ -52,7 +52,7 @@ const ProductImages = ({ images = [] }) => {
         <GatsbyImage
           className="relative h-full w-full object-cover object-center"
           image={images[current].image.childImageSharp.gatsbyImageData}
-          alt={`Product #${current + 1}`}
+          alt={`Sản phẩm #${current + 1}`}
         />
       </div>
     </div>

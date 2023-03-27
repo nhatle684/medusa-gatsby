@@ -120,14 +120,14 @@ const Header = () => {
             <div className="hidden lg:flex lg:items-center">
               <div className="hidden flex-grow items-center justify-center lg:flex text-sm font-medium">
                 <HeaderLink to="/products" text="Sản phẩm" />
-                <HeaderLink to="/collections" text="Danh mục" />
+                <HeaderLink to="/collections" text="Dòng máy" />
               </div>
             </div>
           </div>
 
           <div className="flex items-center justify-end">
             <div className="hidden lg:flex">
-              <RegionPopover regions={mockData.regions} />
+              {/* <RegionPopover regions={mockData.regions} /> */}
               <AccountPopover customer={mockData.customer} />
             </div>
             <CartPopover cart={mockData.cart} />

@@ -1,7 +1,7 @@
 import React from "react"
 import ShippingOptions from "../shipping/shipping-options"
 
-const CheckoutDelivery = ({ controller, options, currencyCode = "eur" }) => {
+const CheckoutDelivery = ({ controller, options, currencyCode = "vnd" }) => {
   const { setSelectedShippingMethod, selectedShippingMethod } = controller
   return (
     <div className="my-8">
@@ -9,7 +9,7 @@ const CheckoutDelivery = ({ controller, options, currencyCode = "eur" }) => {
         <div className="bg-gray-400 text-white w-4 h-4 rounded-lg text-center mr-2">
         !
       </div>
-      <p>Taxes may apply, and will be added upon continuation to the next step.</p>
+      <p>Thuế có thể được áp dụng và sẽ được thêm vào khi tiếp tục sang bước tiếp theo</p>
       </div>
       <ShippingOptions
         defaultValue={selectedShippingMethod}

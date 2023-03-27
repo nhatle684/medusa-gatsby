@@ -4,31 +4,31 @@ import React from "react"
 const Footer = () => {
   const socials = [
     {
-      name: "GitHub",
-      url: "https://www.github.com/medusajs",
+      name: "Hotline: 0908298038",
+      url: "tel:+840908298308",
     },
     {
-      name: "Twitter",
+      name: "Facebook",
       url: "https://www.twitter.com/medusajs",
     },
     {
-      name: "Discord",
+      name: "Zalo",
       url: "https://discord.gg/ruGn9fmv9q",
     },
   ]
 
   const internals = [
     {
-      name: "Create return",
+      name: "Trả hàng",
       to: "/create-return",
     },
     {
-      name: "FAQ",
-      to: "/faq",
+      name: "Chính sách mua hàng",
+      to: "/chinh-sach-mua-hang",
     },
     {
-      name: "Terms & Conditions",
-      to: "/terms-and-conditions",
+      name: "Liên hệ",
+      to: "/lien-he",
     },
   ]
 

@@ -13,14 +13,14 @@ const SignIn = () => {
 
   return (
     <AuthLayout>
-      <SearchEngineOptimization title="Sign In" />
+      <SearchEngineOptimization title="Đăng nhập" />
       <div className="w-full lg:w-3/5">
         <div className="mb-6 flex-grow">
-          <h1 className="mb-1">Welcome back</h1>
+          <h1 className="mb-1">Chào mừng trở lại</h1>
           <p className="text-sm font-light">
-            Don't have an account?{" "}
+            Bạn chưa có tài khoản?{" "}
             <Link to="/sign-up" className="underline">
-              Sign up
+              Đăng ký
             </Link>
           </p>
         </div>
@@ -45,7 +45,7 @@ const SignIn = () => {
             defaultValue={loginForm.values.email}
           />
           <Field
-            label="Password"
+            label="Mật khẩu"
             type="password"
             autocomplete="old-password"
             name={"password"}
@@ -53,7 +53,7 @@ const SignIn = () => {
             defaultValue={loginForm.values.password}
           />
           <button className="btn-ui w-full mt-8" type="submit">
-            Sign in
+            Đăng nhập
           </button>
         </form>
       </div>

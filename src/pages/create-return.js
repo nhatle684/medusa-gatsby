@@ -66,18 +66,18 @@ const CreateReturn = ({ location }) => {
 
   return (
     <div className="layout-base">
-      <SearchEngineOptimization title="Create Return" />
+      <SearchEngineOptimization title="Trả hàng" />
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between border-b border-ui-medium pb-8">
         <div>
-          <h1>Create Return</h1>
+          <h1>Trả hàng</h1>
           <p className="mt-2">
-            Use this form to create returns and exchange items
+            Dùng biểu mẫu này để trả và dổi hàng
           </p>
         </div>
         <div className="flex flex-col mt-4 lg:mt-0 lg:flex-row lg:items-baseline lg:w-1/2">
           <SplitField>
             <Field
-              placeholder="Order number"
+              placeholder="Số đơn hàng"
               formik={fetchOrderForm}
               name="display_id"
               defaultValue={fetchOrderForm.values.display_id}
@@ -98,7 +98,7 @@ const CreateReturn = ({ location }) => {
               fetchOrderForm.submitForm()
             }}
           >
-            Retrieve
+            Tìm
           </button>
         </div>
       </div>
@@ -108,8 +108,8 @@ const CreateReturn = ({ location }) => {
             <div className="mt-8">
               <OrderBulletin order={order} cta={false} />
               <div className="mt-8">
-                <h3>Select items</h3>
-                <p>Select the items you wish to return</p>
+                <h3>Chọn sản phẩm</h3>
+                <p>Chọn sản phẩm bạn muốn trả lại</p>
                 <div
                   className={classNames(
                     returnItemsError ? "block" : "hidden",
@@ -137,10 +137,9 @@ const CreateReturn = ({ location }) => {
               </div>
               <Divider />
               <div>
-                <h3>Quantity</h3>
+                <h3>Số lượng</h3>
                 <p>
-                  Select the quantity of each item you wish to return. You can
-                  only return up to the quantity you purchased.
+                  Chọn số lượng của mỗi mặt hàng mà bạn muốn trả lại. Bạn chỉ có thể trả lại số lượng tối đa bằng với số lượng đã mua.
                 </p>
                 {selectedItems.map(item => {
                   return (
@@ -155,10 +154,9 @@ const CreateReturn = ({ location }) => {
               </div>
               <Divider />
               <div>
-                <h3>Exchanges</h3>
+                <h3>Đổi hàng</h3>
                 <p className="mt-1">
-                  If you wish to exchange an item, select the quantity of the
-                  item aswell as the variant you wish to receive instead.
+                Nếu bạn muốn đổi một mặt hàng, hãy chọn số lượng của mặt hàng cũng như loại bạn muốn nhận thay vào đó.
                 </p>
                 {selectedItems.map(item => {
                   return (
@@ -179,9 +177,9 @@ const CreateReturn = ({ location }) => {
                 {returnOptions.length && (
                   <ShippingOptions
                     options={returnOptions}
-                    title="Return method"
+                    title="Phương thức trả"
                     description={
-                      "We recommend purchasing a shipping label to ensure there is a tracking code and safe means for returning your product(s)."
+                      "Chúng tôi khuyến nghị bạn nên chọn hãng vận chuyển để đảm bảo có mã theo dõi và phương tiện an toàn để trả lại sản phẩm của bạn."
                     }
                     onSelect={setSelectedShipping}
                     defaultValue={selectedShipping}
@@ -216,11 +214,11 @@ const CreateReturn = ({ location }) => {
           {notReturnable ? (
             <ErrorMessage
               error={
-                "The selected order is not able to be returned. This can be because it has not been processed yet, or due to it already having been returned. If you wish to cancel your order or have any questions then don't hesitate to contact us"
+                "Đơn hàng đã chọn không thể được trả lại. Điều này có thể là do đơn hàng chưa được xử lý hoặc đã được trả lại trước đó. Nếu bạn muốn hủy đơn hàng hoặc có bất kỳ câu hỏi nào thì đừng ngần ngại liên hệ với chúng tôi."
               }
             />
           ) : (
-            <p>Retrieve an order to create a return</p>
+            <p>Tìm đơn hàng để trả lại</p>
           )}
         </div>
       )}

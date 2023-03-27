@@ -18,14 +18,14 @@ const Totals = ({ cart, shippingOption }) => {
   return (
     <div className="font-light text-sm">
       <div className="flex items-center justify-between mb-2">
-        <p>Subtotal</p>
+        <p>Thành tiền</p>
         <p className="font-medium">
           {formatPrice(cart.subtotal, currencyCode)}
         </p>
       </div>
       {shippingOption && (
         <div className="flex items-center justify-between mb-2">
-          <p>Shipping</p>
+          <p>Phí vận chuyển</p>
           <p className="font-medium">
             {formatPrice(shippingOption.amount, currencyCode)}
           </p>
@@ -33,14 +33,14 @@ const Totals = ({ cart, shippingOption }) => {
       )}
       {!shippingOption && estimatedShipping && (
         <div className="flex items-center justify-between mb-2">
-          <p>Estimated shipping</p>
+          <p>Ước tính phí vận chuyển</p>
           <p className="font-medium">
             {formatPrice(estimatedShipping, currencyCode)}
           </p>
         </div>
       )}
       <div className="flex items-center justify-between mb-2">
-        <p>Taxes</p>
+        <p>Thuế</p>
         <p className="font-medium">
           {formatPrice(cart.tax_total, currencyCode)}
         </p>
@@ -48,7 +48,7 @@ const Totals = ({ cart, shippingOption }) => {
       {appliedDiscount ? (
         <div className="flex items-center justify-between mb-2">
           <div className="inline-flex items-center">
-            <p>Discount</p>
+            <p>Giảm giá</p>
             <span className="text-2xs py-1 px-3 rounded-2xl bg-ui-medium ml-2 font-medium">
               {appliedDiscount.code}
             </span>
@@ -64,7 +64,7 @@ const Totals = ({ cart, shippingOption }) => {
       ) : null}
       <div className="h-px w-full bg-ui-medium mb-2" />
       <div className="flex items-center justify-between">
-        <p>Total</p>
+        <p>Tổng cộng</p>
         <p className="font-medium">{formatPrice(total, currencyCode)}</p>
       </div>
     </div>

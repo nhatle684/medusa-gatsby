@@ -5,7 +5,7 @@ import SearchEngineOptimization from "../components/utility/seo"
 const Checkout = () => {
   return (
     <div className="bg-ui">
-      <SearchEngineOptimization title="Checkout" />
+      <SearchEngineOptimization title="Mua hàng" />
       <CheckoutFlow />
     </div>
   )

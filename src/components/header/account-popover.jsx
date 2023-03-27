@@ -16,11 +16,11 @@ const AccountPopover = () => {
 
   const links = [
     {
-      label: "Account",
+      label: "Tài khoản",
       to: "/account",
     },
     {
-      label: "Order history",
+      label: "Lịch sử mua hàng",
       to: "/account/order-history",
     },
   ]
@@ -30,7 +30,7 @@ const AccountPopover = () => {
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-600">
-            {customer ? customerName : "Account"}
+            {customer ? customerName : "Tài khoản"}
           </Menu.Button>
         </div>
 
@@ -71,7 +71,7 @@ const AccountPopover = () => {
                           "text-ui-dark block py-3 text-sm w-full text-left hover:text-black"
                         }
                       >
-                        Sign in
+                        Đăng nhập
                       </Link>
                     )}
                   </Menu.Item>
@@ -85,7 +85,7 @@ const AccountPopover = () => {
                           "text-ui-dark block py-3 text-sm w-full text-left hover:text-black"
                         }
                       >
-                        Create account
+                        Tạo tài khoản
                       </Link>
                     )}
                   </Menu.Item>

@@ -24,11 +24,9 @@ const IndexPage = ({ data }) => {
             className="w-full lg:w-1/2 h-auto"
           />
           <div>
-            <h1 className="text-4xl">CLAIM YOUR MERCH</h1>
+            <h1 className="text-4xl">Cửa hàng máy may Nghĩa</h1>
             <p className="mt-2 text-lg font-normal">
-              Contribute to Medusa and receive free merch
-              <br />
-              as a token of our appreciation
+              Chuyên mua bán thiết bị phụ tùng ngành may mặc
             </p>
             <button className="btn-ui mt-4 min-w-full lg:min-w-0">
               Learn more
@@ -38,8 +36,8 @@ const IndexPage = ({ data }) => {
       </div>
       <div className="layout-base my-12 min-h-0">
         <Grid
-          title={"Featured"}
-          cta={{ to: "/products", text: "Browse all products" }}
+          title={"Sản phẩm nổi bật"}
+          cta={{ to: "/products", text: "Xem tất cả sản phẩm" }}
         >
           {prods.slice(0, 4).map(p => {
             return <ProductListItem product={p} key={p.handle} />
@@ -47,8 +45,8 @@ const IndexPage = ({ data }) => {
         </Grid>
         <div className="mt-12">
           <Grid
-            title="Shop by collection"
-            cta={{ to: "/collections", text: "Browse all collections" }}
+            title="Mua theo dòng máy"
+            cta={{ to: "/collections", text: "Xem tất cả dòng máy" }}
           >
             {collectionPreviews.slice(0, 4).map(collection => {
               return (

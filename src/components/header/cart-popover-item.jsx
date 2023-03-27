@@ -11,17 +11,17 @@ const CartPopoverItem = ({ item, currencyCode }) => {
         <div>
           <p className="font-medium text-sm">{item.title}</p>
           <p className="text-xs mt-1">
-            <span className="text-ui-dark">Variant:</span> {item.description}
+            <span className="text-ui-dark">Loại:</span> {item.description}
           </p>
         </div>
         <div className="flex items-center font-light text-xs">
           <p>
-            <span className="text-ui-dark">Quantity</span>{" "}
+            <span className="text-ui-dark">Số lượng</span>{" "}
             <span>{item.quantity}</span>
           </p>
           <div className="w-px h-4 bg-ui-dark mx-3" />
           <p>
-            <span className="text-ui-dark">Price</span>{" "}
+            <span className="text-ui-dark">Giá</span>{" "}
             <span>
               {formatPrice(item.unit_price, currencyCode, item.quantity)}
             </span>

@@ -34,7 +34,7 @@ const CartItem = ({ item, currencyCode, showDescription = true }) => {
               {item.variant?.product?.description}
             </p>
             <p>
-              <span className="text-ui-dark">Variant:</span> {item.description}
+              <span className="text-ui-dark">Loại:</span> {item.description}
             </p>
           </div>
           <p className="font-semibold">

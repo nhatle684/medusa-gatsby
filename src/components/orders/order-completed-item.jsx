@@ -14,20 +14,20 @@ const OrderCompletedItem = ({ item, currencyCode }) => {
           <h3>{item.title}</h3>
           <div className="text-sm mt-4">
             <p className="mb-2 last:mb-0">
-              Variant: <span>{item.description}</span>
+              Loại: <span>{item.description}</span>
             </p>
           </div>
         </div>
         <div className="text-sm text-ui-dark">
           <DividedContainer>
             <p>
-              Quantity{" "}
+              Số lượng{" "}
               <span className="text-gray-700 font-semibold">
                 {item.quantity}
               </span>
             </p>
             <p>
-              Price{" "}
+              Giá{" "}
               <span className="text-gray-700 font-semibold">
                 {formatPrice(
                   item.unit_price,

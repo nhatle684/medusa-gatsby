@@ -17,7 +17,7 @@ const DiscountField = () => {
       discount_code: "",
     },
     validationSchema: Yup.object({
-      discount_code: Yup.string().required("Discount code can't be empty"),
+      discount_code: Yup.string().required("Mã giảm giá không thể trống"),
     }),
     onSubmit: async (values, { setErrors }) => {
       await addDiscount(values.discount_code)
@@ -51,7 +51,7 @@ const DiscountField = () => {
 
   return (
     <div>
-      <p className="font-semibold text-sm mb-2">Discount code</p>
+      <p className="font-semibold text-sm mb-2">Mã giảm giá</p>
       <div className="flex items-start">
         {!code ? (
           <Fragment>
@@ -62,7 +62,7 @@ const DiscountField = () => {
             />
             <div className="mx-2" />
             <button className="btn-ui" onClick={handleSubmit} type="submit">
-              Apply
+              Dùng
             </button>
           </Fragment>
         ) : (
@@ -80,7 +80,7 @@ const DiscountField = () => {
               onClick={async () => await removeDiscount()}
               type="button"
             >
-              Remove
+              Xóa
             </button>
           </Fragment>
         )}

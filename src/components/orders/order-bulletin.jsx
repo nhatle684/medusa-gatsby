@@ -40,31 +40,31 @@ const OrderBulletin = ({ order, cta = true }) => {
       >
         <div className="mr-10">
           <OrderBulletinInfo
-            label="Order number"
+            label="Đơn hàng số"
             info={`#${order.display_id}`}
           />
         </div>
         <div className="hidden lg:block mr-10">
           <OrderBulletinInfo
-            label="Date placed"
+            label="Ngày đặt"
             info={new Date(order.created_at).toLocaleDateString()}
           />
         </div>
         <div className="hidden lg:block mr-10">
           <OrderBulletinInfo
-            label="Shipment"
+            label="Trạng thái giao hàng"
             info={capitalize(order.fulfillment_status.replace(/_/g, " "))}
           />
         </div>
         <div className="hidden lg:block mr-10">
           <OrderBulletinInfo
-            label="Payment"
+            label="Thanh toán"
             info={capitalize(order.payment_status.replace(/_/g, " "))}
           />
         </div>
         <div className="hidden lg:block">
           <OrderBulletinInfo
-            label="Total amount"
+            label="Tổng cộng"
             info={formatPrice(order.total, order.currency_code)}
           />
         </div>
@@ -78,7 +78,7 @@ const OrderBulletin = ({ order, cta = true }) => {
           state={{ order: order }}
         >
           <button className="btn-ui">
-            {!isReturnable ? "Can't be returned" : "Create return"}
+            {!isReturnable ? "Không thể trả hàng" : "Trả hàng"}
           </button>
         </Link>
       )}

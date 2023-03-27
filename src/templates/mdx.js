@@ -4,9 +4,11 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 import Expandable from "../components/mdx/expandable"
 import Spacing from "../components/mdx/spacing"
+import GoogleMap from "../components/mdx/google-map"
+import Icon from "../components/mdx/icon"
 import SearchEngineOptimization from "../components/utility/seo"
 
-const shortcodes = { Link, Expandable, Spacing }
+const shortcodes = { Link, Expandable, Spacing, GoogleMap, Icon }
 
 const Mdx = ({ data: { mdx } }) => {
   return (

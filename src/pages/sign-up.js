@@ -16,11 +16,11 @@ const SignUp = () => {
       <SearchEngineOptimization title="Sign Up" />
       <div className="w-3/5">
         <div className="mb-6 flex-grow">
-          <h1 className="mb-1">Create account</h1>
+          <h1 className="mb-1">Tạo tài khoản</h1>
           <p className="text-sm font-light">
-            Already have an account?{" "}
+            Đã có tài khoản?{" "}
             <Link to="/sign-in" className="underline">
-              Sign in
+              Đăng nhập
             </Link>
           </p>
         </div>
@@ -34,20 +34,20 @@ const SignUp = () => {
             <ErrorMessage error={registerForm.status.authError} />
           )}
           <Field
-            label="First name"
-            className="mb-4"
-            autocomplete="given-name"
-            name={"first_name"}
-            formik={registerForm}
-            defaultValue={registerForm.values.first_name}
-          />
-          <Field
-            label="Last name"
+            label="Họ"
             className="mb-4"
             autocomplete="family-name"
             name={"last_name"}
             formik={registerForm}
             defaultValue={registerForm.values.last_name}
+          />
+          <Field
+            label="Tên"
+            className="mb-4"
+            autocomplete="given-name"
+            name={"first_name"}
+            formik={registerForm}
+            defaultValue={registerForm.values.first_name}
           />
           <Field
             label="Email"
@@ -58,7 +58,7 @@ const SignUp = () => {
             defaultValue={registerForm.values.email}
           />
           <Field
-            label="Phone (optional)"
+            label="Điện thoại (optional)"
             autocomplete="tel"
             className="mb-4"
             name={"phone"}
@@ -66,7 +66,7 @@ const SignUp = () => {
             defaultValue={registerForm.values.phone}
           />
           <Field
-            label="Password"
+            label="Mật khẩu"
             type="password"
             autocomplete="new-password"
             name={"password"}
@@ -74,7 +74,7 @@ const SignUp = () => {
             defaultValue={registerForm.values.password}
           />
           <button className="btn-ui w-full mt-8" type="submit">
-            Sign up
+            Đăng ký
           </button>
         </form>
       </div>

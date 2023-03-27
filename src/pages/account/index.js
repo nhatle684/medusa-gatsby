@@ -22,9 +22,9 @@ const Account = () => {
       phone: customer?.phone || "",
     },
     validationSchema: Yup.object({
-      first_name: Yup.string().required("Required"),
-      last_name: Yup.string().required("Required"),
-      email: Yup.string().email("Invalid email").required("Required"),
+      first_name: Yup.string().required("Vui lòng điền thông tin"),
+      last_name: Yup.string().required("Vui lòng điền thông tin"),
+      email: Yup.string().email("Email không hợp lệ").required("Vui lòng điền thông tin"),
       phone: Yup.string().optional(),
     }),
     onSubmit: async values => {
@@ -39,10 +39,10 @@ const Account = () => {
       passwordConfirmation: "",
     },
     validationSchema: Yup.object({
-      password: Yup.string().required("Password is required"),
+      password: Yup.string().required("Vui lòng điền mật khẩu"),
       passwordConfirmation: Yup.string().oneOf(
         [Yup.ref("password"), null],
-        "Passwords must match"
+        "Mật khẩu không trùng khớp"
       ),
     }),
     onSubmit: async (values, { setStatus }) => {
@@ -60,28 +60,28 @@ const Account = () => {
 
   return (
     <AccountLayout>
-      <SearchEngineOptimization title="Account" />
+      <SearchEngineOptimization title="Tài khoản" />
       <div>
         <FormContainer
-          title="Contact"
-          description="We need this information in case we need to contact you."
+          title="Liên hệ"
+          description="Chúng tôi cần thông tin này để liên hệ trong trường hợp cần thiết."
           handleSubmit={contactForm.handleSubmit}
         >
           <div className="flex items-center mb-4">
             <Field
-              label="First name"
-              autocomplete="given-name"
-              name="first_name"
-              formik={contactForm}
-              defaultValue={contactForm.values.first_name}
-            />
-            <div className="mx-2" />
-            <Field
-              label="Last name"
+              label="Họ"
               autocomplete="family-name"
               name="last_name"
               formik={contactForm}
               defaultValue={contactForm.values.last_name}
+            />
+            <div className="mx-2" />
+            <Field
+              label="Tên"
+              autocomplete="given-name"
+              name="first_name"
+              formik={contactForm}
+              defaultValue={contactForm.values.first_name}
             />
           </div>
           <div className="flex items-center">
@@ -94,7 +94,7 @@ const Account = () => {
             />
             <div className="mx-2" />
             <Field
-              label="Phone (optional)"
+              label="Điện thoại (optional)"
               autocomplete="tel"
               name="phone"
               formik={contactForm}
@@ -105,13 +105,13 @@ const Account = () => {
       </div>
       <div className="mt-16">
         <FormContainer
-          title="Password"
-          description="You can use this form to reset your password."
+          title="Mật khẩu"
+          description="Bạn có thể sử dụng biểu mẫu này để đặt lại mật khẩu của bạn."
           handleSubmit={passwordForm.handleSubmit}
         >
           <div className="flex items-center">
             <Field
-              label="New Password"
+              label="Mật khẩu mới"
               type="password"
               autocomplete="new-password"
               name="password"
@@ -120,7 +120,7 @@ const Account = () => {
             />
             <div className="mx-2" />
             <Field
-              label="Confirm Password"
+              label="Xác nhận mật khẩu"
               type="password"
               autocomplete="new-password"
               name="passwordConfirmation"
