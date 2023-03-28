@@ -8,12 +8,12 @@ const Footer = () => {
       url: "tel:+840908298308",
     },
     {
-      name: "Facebook",
-      url: "https://www.twitter.com/medusajs",
+      name: "Youtube",
+      url: "#",
     },
     {
       name: "Zalo",
-      url: "https://discord.gg/ruGn9fmv9q",
+      url: "https://zalo.me/0908298038",
     },
   ]
 
@@ -55,6 +55,7 @@ const Footer = () => {
                 href={social.url}
                 key={social.name}
                 className="mr-3 last:mr-0 text-ui-dark hover:text-gray-700"
+                target="_blank" rel="noopener noreferrer"
               >
                 {social.name}
               </a>
