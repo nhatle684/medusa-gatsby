@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Medusa Gatsby Starter`,
-    description: `Kick off your next, great e-commerce project with this default starter with Medusa, Gatsby and common dev tools.`,
-    author: `@medusajs`,
+    title: `Máy may Nghĩa`,
+    description: `Chuyên bán & sửa máy may, máy vắt sổ, máy kansai, bàn ủi hơi nước các loại`,
+    author: ``,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -47,6 +47,12 @@ module.exports = {
       options: {
         storeUrl:
           process.env.GATSBY_MEDUSA_BACKEND_URL || `http://localhost:9000`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/icons/logo.png',
       },
     },
   ],

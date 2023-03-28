@@ -40,14 +40,6 @@ const CheckoutAddress = ({ controller }) => {
         formik={controller}
         defaultValue={controller.values.company}
       />
-      {/* <Field
-        label="Căn hộ, phòng, vv."
-        className="mt-4"
-        autocomplete="address-line2"
-        name="address_2"
-        formik={controller}
-        defaultValue={controller.values.address_2}
-      /> */}
       <SplitField>
         <Select
           label="Quốc gia"
@@ -86,22 +78,6 @@ const CheckoutAddress = ({ controller }) => {
           defaultValue={controller.values.address_1}
         />
       </SplitField>
-      {/* <SplitField>
-        <Field
-          label="Quận/huyện"
-          autocomplete="address-level1"
-          name="province"
-          formik={controller}
-          defaultValue={controller.values.province}
-        />
-        <Field
-          label="ZIP / Postal Code"
-          autocomplete="postal-code"
-          name="postal_code"
-          formik={controller}
-          defaultValue={controller.values.postal_code}
-        />
-      </SplitField> */}
       <Field
         label="Điện thoại"
         className="mt-4"

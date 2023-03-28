@@ -18,19 +18,16 @@ const IndexPage = ({ data }) => {
       <div className="bg-ui-light pb-12 lg:pb-0 w-full px-4 sm:px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto">
           <StaticImage
-            src="../images/hero-merch.png"
-            alt="A black Medusa hoodie and a white Medusa coffee mug"
+            src="../images/may-may-nghia.png"
+            alt="Cửa hàng máy may Nghĩa"
             placeholder="tracedSVG"
             className="w-full lg:w-1/2 h-auto"
           />
           <div>
             <h1 className="text-4xl">Cửa hàng máy may Nghĩa</h1>
             <p className="mt-2 text-lg font-normal">
-              Chuyên mua bán thiết bị phụ tùng ngành may mặc
+            Chuyên bán & sửa máy may, máy vắt sổ, máy kansai, bàn ủi hơi nước các loại
             </p>
-            <button className="btn-ui mt-4 min-w-full lg:min-w-0">
-              Learn more
-            </button>
           </div>
         </div>
       </div>

@@ -16,6 +16,7 @@
     "formik": "^2.2.9",
     "gatsby": "^4.0.2",
     "gatsby-plugin-image": "^2.0.0",
+    "gatsby-plugin-manifest": "^4.25.0",
     "gatsby-plugin-mdx": "^3.3.0",
     "gatsby-plugin-postcss": "^5.0.0",
     "gatsby-plugin-purgecss": "^6.1.0",

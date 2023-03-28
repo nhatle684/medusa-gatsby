@@ -8,7 +8,7 @@
  */
 export const formatPrice = (amount, currencyCode, quantity = 1) => {
   return (
-    parseFloat(((amount) * quantity * 1).toFixed(2)) +
+    parseFloat(((amount) * quantity * 1).toFixed(2)).toLocaleString('vi-VN') +
     " " +
     currencyCode.toUpperCase()
   )
